@@ -1,0 +1,13 @@
+Just a dummy file with a few lines of text in it.
+I'm going to use this to test the file reading and writing functions in the program.
+This is the second line of text in the file.
+This is the third line of text in the file.
+This is the fourth line of text in the file.
+This is the fifth line of text in the file.
+This is the sixth line of text in the file.
+This is the seventh line of text in the file.
+This is the eighth line of text in the file.
+This is the ninth line of text in the file.
+This is the tenth line of text in the file.
+
+It is for testing a simple file analyzer program that I'm writing.
