@@ -4,8 +4,7 @@ use std::io::{BufRead, BufReader};
 fn main() -> std::io::Result<()>
 {
 
-    let file_handler = file_handler("data.txt").expect("File not found");
-    let buf_reader = BufReader::new(file_handler);
+    let buf_reader = file_handler("data.txt").expect("File not found");
 
     for line in buf_reader.lines()
     {
@@ -17,8 +16,9 @@ fn main() -> std::io::Result<()>
 }
 
 
-fn file_handler(file_name:&str) -> Result<File, Box<dyn std::error::Error>>
+fn file_handler(file_name:&str) -> Result<BufReader<File>, Box<dyn std::error::Error>>
 {
     let file_handler = File::open(file_name)?;
-    Ok(file_handler)
+    let buf_reader = BufReader::new(file_handler)?;
+    Ok(buf_reader)
 }
